@@ -1,0 +1,238 @@
+:root{
+    --main-blue:#3672cc;
+    --main-red: #dd2121;
+    --main-orange: #f39d0a;
+    --main-grey: #c4cbd2;
+    --main-lightgrey: #e5e8ec;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherited;
+}
+html{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Merriweather', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: white;
+}
+h1,
+h2 {
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+h1{
+    font-size: 30px;
+}
+h2{
+    font-size: 26px;
+}
+img{
+    display: block;
+    width: 100%;
+}
+ul{
+    list-style: none;
+}
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    background: var(--main-orange);
+}
+nav > ul{
+    display: flex;
+    flex-direction: row;
+    margin-right: 32px;
+}
+@media (max-width: 460px){
+  .nav{
+      justify-content: center;
+    }
+    nav{
+      margin: 0 16px;
+    }
+}
+nav a{
+    display: block;
+    font-size: 30px;
+    padding: 24px;
+    color: var(--main-red);
+}
+nav a:hover{
+    background: var(--main-blue);
+}
+#welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-color: var(--main-grey);
+}
+#welcome-section > p{
+    font-size: 32px;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-red);
+}
+#welcome-section > h1{
+    color: black;
+}
+#projects{
+    text-align: center;
+    padding: 10 rem 2rem;
+    background: var(--main-blue);
+}
+.projects-section-header h2{
+    max-width: 640px;
+    padding-top: 10px;
+    margin: 0 auto 0 auto;
+    border-bottom: 4px solid black;
+    color: black;
+}
+.projects-section-header p{
+    max-width: 640px;
+    padding-top: 10px;
+    margin: 0 auto 70px auto;
+    color: white;
+}
+#projects a{
+    color: var(--main-blue);
+    text-decoration: none;
+}
+@media (max-width: 460px){
+.projects-section-header{
+      font-size: 45px;
+    }
+}
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 64px;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 96px;
+}
+@media (max-width: 960px){
+    .projects-section{
+      padding: 96px 1rem;
+    }
+    .projects-grid{
+      grid-template-columns: 1fr;
+    }
+}
+.project{
+    background: var(--main-orange);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+.code{
+    color: var(--main-orange);
+    transition: color 0.3s ease-out;
+}
+.project:hover .code{
+    color: var(--main-red);
+}
+.project-image{
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+.project-title{
+    font-size: 2rem;
+    padding: 2rem 4px;
+}
+.titles-code{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    display: inline-block;
+    padding: 16px 32px;
+    border: 1px solid var(--main-grey);
+    margin-bottom: 8px;
+    background-color: var(--main-orange);
+}
+.btn-show-all:hover{
+    background: var(--main-red);
+}
+.btn-show-all:hover i{
+    transform: translateX(2px);
+}
+.btn-show-all > i{
+    margin-left: 10px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+}
+#Contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 90vh;
+    background: var(--main-grey);
+}
+#contact-header > h2{
+    font-size: 96px;
+}
+@media (max-width: 460px){
+      #contact-header > h2{
+      font-size: 64px;
+    }
+}
+#contact-header > p{
+    font-style: italic;
+}
+#contact-links{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 64px;
+    flex-wrap: wrap;
+}
+.contact-details{
+    font-size: 38.4px;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+.contact-details:hover{
+    transform: translateY(8px);
+}
+footer{
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 32px;
+    background: var(--main-red);
+    border-top: 4px solid var(--main-blue);
+}
+footer > p{
+    margin: 32px;
+}
+footer i{
+    vertical-align: middle;
+}
+@media (max-width: 460px) {
+    footer{
+      flex-direction: column;
+      text-align: center;
+    }
+}
